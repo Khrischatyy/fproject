@@ -184,8 +184,13 @@
           We offer a comprehensive range of services designed to cater to all your remodeling and home improvement needs.
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div v-for="service in services" :key="service" class="p-6 bg-gray-100 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold">{{ service }}</h3>
+          <div
+              v-for="service in services"
+              :key="service.name"
+              class="p-6 bg-gray-100 rounded-lg shadow-md flex flex-col items-center"
+          >
+            <font-awesome-icon :icon="service.icon" class="text-4xl text-blue-500 mb-4" />
+            <h3 class="text-xl font-semibold">{{ service.name }}</h3>
           </div>
         </div>
       </div>
@@ -384,68 +389,70 @@ export default {
     return {
       works: [
         {
-          title: "Kitchen Remodeling",
+          title: "ELECTRICAL",
           description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/kitchen.jpeg'), // Correct path
+          image: require('@/assets/works/elecrical.jpg'), // Correct path
         },
         {
-          title: "Home Remodeling",
+          title: "PLUMBING",
           description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/home.jpeg'), // Correct path
+          image: require('@/assets/works/plumbing.webp'), // Correct path
         },
         {
-          title: "Bath Remodeling",
+          title: "PAINTING",
           description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/kitchen.jpeg'), // Correct path
+          image: require('@/assets/works/Painting.webp'), // Correct path
         },
         {
-          title: "Whole House Remodeling",
+          title: "DRYWALL INSTALLATION",
           description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/home.jpeg'), // Correct path
+          image: require('@/assets/works/drywall-installation-1200x600.jpg'), // Correct path
         },
         {
-          title: "Kitchen Remodeling",
+          title: "HVAC AND VENTOLATION",
           description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/kitchen.jpeg'), // Correct path
+          image: require('@/assets/works/HVAC.jpg'), // Correct path
         },
         {
-          title: "Garage Conversions",
+          title: "TILE INSTALLATION",
           description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/home.jpeg'), // Correct path
+          image: require('@/assets/works/Tile installation.jpg'), // Correct path
         },
         {
-          title: "Roofing",
+          title: "FLOOR INSTALLATION\t",
           description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/kitchen.jpeg'), // Correct path
+          image: require('@/assets/works/Floor installation.webp'), // Correct path
         },
         {
-          title: "Interior and Exterior Painting",
+          title: "COUNTERTOPS INSTALLATION",
           description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/home.jpeg'), // Correct path
+          image: require('@/assets/works/Countertops.jpg'), // Correct path
         },
         {
-          title: "Handyman Jobs",
+          title: "WOOD RESTORATION",
           description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/home.jpeg'), // Correct path
+          image: require('@/assets/works/wood restoration.jpg'), // Correct path
         },
         {
-          title: "Smart Home Installation",
+          title: "LAMBER",
           description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/kitchen.jpeg'), // Correct path
+          image: require('@/assets/works/lamber.webp'), // Correct path
         },
         {
-          title: "Driveways",
+          title: "KITCHEN CABINETES",
           description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/home.jpeg'), // Correct path
+          image: require('@/assets/works/klitchen cabinets.webp'), // Correct path
         },
       ],
       services: [
-        "Custom Design",
-        "Project Management",
-        "Budget-Friendly Options",
-        "High-Quality Materials",
-        "Licensed & Insured Professionals",
-        "Eco-Friendly Solutions",
+        { name: "GENERAL REMODELING", icon: "tools" },
+        { name: "KITCHEN REMODELING", icon: "sink" },
+        { name: "BATHROOM REMODELING", icon: "shower" },
+        { name: "BEDROOM REMODELING", icon: "bed" },
+        { name: "GARAGE RENOVATION", icon: "warehouse" },
+        { name: "ADU CONSTRUCTION", icon: "house-chimney" },
+        { name: "SMART HOME INSTALLATION", icon: "microchip" },
+        { name: "CLOSETS", icon: "door-closed" },
       ],
       testimonials: [
         { name: "John Doe", quote: "Amazing work! My kitchen looks stunning." },
