@@ -130,7 +130,10 @@
           <p class="mt-8 text-lg font-medium text-gray-300 sm:text-xl">
             At <span class="font-bold text-white">Elite Remodeling Services</span>, we are dedicated to creating beautiful,
             functional, and personalized spaces for every client. With over a decade of expertise, we transform houses into
-            dream homes, combining innovative designs, premium materials, and exceptional craftsmanship.
+            dream homes, combining innovative designs, premium materials, and exceptional craftsmanship. Our services include
+            general remodeling, kitchen remodeling, bathroom remodeling, bedroom remodeling, garage renovations, ADU construction,
+            smart home installations, and custom closet solutions. Whether you're looking to upgrade a single room or reimagine
+            your entire home, our team is here to bring your vision to life.
           </p>
         </div>
         <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
