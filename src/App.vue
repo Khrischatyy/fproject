@@ -409,7 +409,7 @@ export default {
           image: require('@/assets/works/drywall-installation-1200x600.jpg'), // Correct path
         },
         {
-          title: "HVAC AND VENTOLATION",
+          title: "HVAC AND VENTILATION",
           description: "Transform your kitchen into a functional and stylish space.",
           image: require('@/assets/works/HVAC.jpg'), // Correct path
         },
@@ -434,12 +434,12 @@ export default {
           image: require('@/assets/works/wood restoration.jpg'), // Correct path
         },
         {
-          title: "LAMBER",
+          title: "LUMBER",
           description: "Transform your kitchen into a functional and stylish space.",
           image: require('@/assets/works/lamber.webp'), // Correct path
         },
         {
-          title: "KITCHEN CABINETES",
+          title: "KITCHEN CABINETS",
           description: "Elevate your home with our expert remodeling services.",
           image: require('@/assets/works/klitchen cabinets.webp'), // Correct path
         },
