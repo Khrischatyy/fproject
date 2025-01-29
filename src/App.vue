@@ -102,33 +102,15 @@
     <!-- About Us -->
     <section id="about" class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+          src="@/assets/bg_photo.jpg"
           alt="About Elite Remodeling Services"
           class="absolute inset-0 -z-10 w-full h-full object-cover object-center"
       />
-      <div
-          class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
-          aria-hidden="true"
-      >
-        <div
-            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-indigo-500 to-purple-700 opacity-20"
-            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-        ></div>
-      </div>
-      <div
-          class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
-          aria-hidden="true"
-      >
-        <div
-            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-indigo-500 to-purple-700 opacity-20"
-            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-        ></div>
-      </div>
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="backdrop-blur-md rounded-3xl p-5 mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">About Us</h2>
-          <p class="mt-8 text-lg font-medium text-gray-300 sm:text-xl">
-            At <span class="font-bold text-white">Elite Remodeling Services</span>, we are dedicated to creating beautiful,
+          <p class="mt-8 text-lg font-medium text-gray-100 sm:text-xl">
+            At <span class="font-bold text-white"><b>Elite Remodeling Services</b></span>, we are dedicated to creating beautiful,
             functional, and personalized spaces for every client. With over a decade of expertise, we transform houses into
             dream homes, combining innovative designs, premium materials, and exceptional craftsmanship. Our services include
             general remodeling, kitchen remodeling, bathroom remodeling, bedroom remodeling, garage renovations, ADU construction,
@@ -139,19 +121,19 @@
         <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             <div class="flex flex-col-reverse gap-1">
-              <dt class="text-base text-gray-300">Years of Expertise</dt>
+              <dt class="text-base text-gray-100">Years of Expertise</dt>
               <dd class="text-4xl font-semibold tracking-tight text-white">15+</dd>
             </div>
             <div class="flex flex-col-reverse gap-1">
-              <dt class="text-base text-gray-300">Happy Clients</dt>
+              <dt class="text-base text-gray-100">Happy Clients</dt>
               <dd class="text-4xl font-semibold tracking-tight text-white">500+</dd>
             </div>
             <div class="flex flex-col-reverse gap-1">
-              <dt class="text-base text-gray-300">Projects Delivered</dt>
+              <dt class="text-base text-gray-100">Projects Delivered</dt>
               <dd class="text-4xl font-semibold tracking-tight text-white">700+</dd>
             </div>
             <div class="flex flex-col-reverse gap-1">
-              <dt class="text-base text-gray-300">Customer Satisfaction</dt>
+              <dt class="text-base text-gray-100">Customer Satisfaction</dt>
               <dd class="text-4xl font-semibold tracking-tight text-white">100%</dd>
             </div>
           </dl>
@@ -161,39 +143,16 @@
 
     <!-- Our Works -->
     <section id="works" class="py-16 bg-gray-100">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">Our Works</h2>
+      <div class="container mx-auto max-w-7xl px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">Our Works</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div
-              v-for="work in works"
-              :key="work.title"
-              class="max-w-sm rounded overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 bg-white"
-          >
-            <img :src="work.image" :alt="work.title" class="w-full h-48 object-cover">
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">{{ work.title }}</div>
-              <p class="text-gray-700 text-base">{{ work.description }}</p>
+          <div v-for="work in works" :key="work.title" class="max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+            <div class="w-full h-64">
+              <img :src="work.image" :alt="work.title" class="w-full h-full object-cover">
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Services -->
-    <section id="services" class="py-16 bg-white">
-      <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4">Our Services</h2>
-        <p class="text-lg mb-6">
-          We offer a comprehensive range of services designed to cater to all your remodeling and home improvement needs.
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div
-              v-for="service in services"
-              :key="service.name"
-              class="p-6 bg-gray-100 rounded-lg shadow-md flex flex-col items-center"
-          >
-            <font-awesome-icon :icon="service.icon" class="text-4xl text-blue-500 mb-4" />
-            <h3 class="text-xl font-semibold">{{ service.name }}</h3>
+            <div class="px-6 py-4">
+              <h3 class="font-bold text-xl mb-2">{{ work.title }}</h3>
+            </div>
           </div>
         </div>
       </div>
@@ -201,7 +160,7 @@
 
     <!-- Testimonials -->
     <section id="testimonials" class="py-16 bg-gray-100">
-      <div class="container mx-auto text-center">
+      <div class="container mx-auto max-w-7xl px-6 text-center">
         <h2 class="text-3xl font-bold mb-8">What Our Clients Say</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div v-for="testimonial in testimonials" :key="testimonial.name" class="p-6 bg-white rounded-lg shadow-md">
@@ -212,143 +171,31 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="py-16 bg-white">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-8">FAQ</h2>
-        <div class="space-y-4">
-          <div v-for="faq in faqs" :key="faq.question" class="p-4 bg-gray-100 rounded-lg">
-            <h3 class="font-semibold">{{ faq.question }}</h3>
-            <p>{{ faq.answer }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Contact Us -->
-    <section id="contact" class="py-16 bg-gray-100">
-      <div class="container mx-auto">
-        <div class="text-center">
-          <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-          <p class="text-lg mb-6">Reach out to us for a free consultation or any questions you may have!</p>
-        </div>
+    <section id="contact" class="py-16 bg-white">
+      <div class="container mx-auto max-w-7xl px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+        <p class="text-lg mb-6">Reach out to us for a free consultation or any questions you may have!</p>
         <form class="space-y-6 max-w-lg mx-auto">
-          <!-- Name Input -->
           <div>
-            <label for="name" class="block text-sm font-medium text-gray-900">Name</label>
-            <div class="mt-2">
-              <div
-                  class="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600"
-              >
-                <!-- Icon -->
-                <svg
-                    class="shrink-0 h-6 w-6 text-gray-500 sm:h-5 sm:w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                >
-                  <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M16.5 7.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0z"
-                  />
-                  <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 14.25c-4.8 0-7.5 2.4-7.5 3.75v.75h15v-.75c0-1.35-2.7-3.75-7.5-3.75z"
-                  />
-                </svg>
-                <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    class="block min-w-0 grow py-3 pl-3 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm"
-                    placeholder="Your Name"
-                />
-              </div>
-            </div>
+<!--            <label for="name" class="block text-sm font-medium text-gray-900">Name</label>-->
+            <input type="text" name="name" id="name" class="block w-full py-3 px-4 text-base text-gray-900 bg-gray-100 rounded-md" placeholder="Your Name" />
           </div>
-
-          <!-- Email Input -->
           <div>
-            <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
-            <div class="mt-2">
-              <div
-                  class="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600"
-              >
-                <!-- Icon -->
-                <svg
-                    class="shrink-0 h-6 w-6 text-gray-500 sm:h-5 sm:w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                >
-                  <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75M21.75 6.75a2.25 2.25 0 0 0-2.25-2.25H4.5a2.25 2.25 0 0 0-2.25 2.25M21.75 6.75l-9 6.75-9-6.75"
-                  />
-                </svg>
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    class="block min-w-0 grow py-3 pl-3 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm"
-                    placeholder="Your Email"
-                />
-              </div>
-            </div>
+<!--            <label for="email" class="block text-sm font-medium text-gray-900">Email</label>-->
+            <input type="email" name="email" id="email" class="block w-full py-3 px-4 text-base text-gray-900 bg-gray-100 rounded-md" placeholder="Your Email" />
           </div>
-
-          <!-- Message Input -->
           <div>
-            <label for="message" class="block text-sm font-medium text-gray-900">Message</label>
-            <div class="mt-2">
-              <div
-                  class="flex items-start rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600"
-              >
-                <!-- Icon -->
-<!--                <svg-->
-<!--                    class="shrink-0 mt-2 h-6 w-6 text-gray-500 sm:h-5 sm:w-5"-->
-<!--                    fill="none"-->
-<!--                    viewBox="0 0 24 24"-->
-<!--                    stroke-width="1.5"-->
-<!--                    stroke="currentColor"-->
-<!--                    aria-hidden="true"-->
-<!--                >-->
-<!--                  <path-->
-<!--                      stroke-linecap="round"-->
-<!--                      stroke-linejoin="round"-->
-<!--                      d="M12 4.5v15m7.5-7.5h-15"-->
-<!--                  />-->
-<!--                </svg>-->
-                <textarea
-                    name="message"
-                    id="message"
-                    rows="2"
-                    class="block min-w-0 grow py-3 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm"
-                    placeholder="Write your message..."
-                ></textarea>
-              </div>
-            </div>
+<!--            <label for="message" class="block text-sm font-medium text-gray-900">Message</label>-->
+            <textarea name="message" id="message" rows="3" class="block w-full py-3 px-4 text-base text-gray-900 bg-gray-100 rounded-md" placeholder="Write your message..."></textarea>
           </div>
-
-          <!-- Submit Button -->
           <div class="text-center">
-            <button
-                type="submit"
-                class="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
-            >
-              Send Message
-            </button>
+            <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-500">Send Message</button>
           </div>
         </form>
       </div>
     </section>
+
     <!-- Footer -->
     <footer class="bg-white text-gray-900 rounded-lg shadow m-4">
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
@@ -382,7 +229,6 @@
       </span>
       </div>
     </footer>
-
   </div>
 </template>
 
@@ -391,71 +237,29 @@ export default {
   data() {
     return {
       works: [
-        {
-          title: "ELECTRICAL",
-          description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/elecrical.jpg'), // Correct path
-        },
-        {
-          title: "PLUMBING",
-          description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/plumbing.webp'), // Correct path
-        },
-        {
-          title: "PAINTING",
-          description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/Painting.webp'), // Correct path
-        },
-        {
-          title: "DRYWALL INSTALLATION",
-          description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/drywall-installation-1200x600.jpg'), // Correct path
-        },
-        {
-          title: "HVAC AND VENTILATION",
-          description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/HVAC.jpg'), // Correct path
-        },
-        {
-          title: "TILE INSTALLATION",
-          description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/Tile installation.jpg'), // Correct path
-        },
-        {
-          title: "FLOOR INSTALLATION\t",
-          description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/Floor installation.webp'), // Correct path
-        },
-        {
-          title: "COUNTERTOPS INSTALLATION",
-          description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/Countertops.jpg'), // Correct path
-        },
-        {
-          title: "WOOD RESTORATION",
-          description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/wood restoration.jpg'), // Correct path
-        },
-        {
-          title: "LUMBER",
-          description: "Transform your kitchen into a functional and stylish space.",
-          image: require('@/assets/works/lamber.webp'), // Correct path
-        },
-        {
-          title: "KITCHEN CABINETS",
-          description: "Elevate your home with our expert remodeling services.",
-          image: require('@/assets/works/klitchen cabinets.webp'), // Correct path
-        },
+        { title: "General Remodeling", image: require('@/assets/works/generalremodeling.jpg') },
+        { title: "Kitchen Remodeling", image: require('@/assets/works/kitchen.jpeg') },
+        { title: "Bedroom Remodeling", image: require('@/assets/works/bedroom remodeling.jpg') },
+        { title: "Garage Renovation", image: require('@/assets/works/garage.webp') },
+        { title: "Smart Home", image: require('@/assets/works/smart home.jpg') },
+        { title: "Bathroom Remodeling", image: require('@/assets/works/Bathroom.jpg') },
+        { title: "Outside Restoration", image: require('@/assets/works/outside.jpeg') },
+        { title: "Closets Remodeling", image: require('@/assets/works/closets.jpg') },
+        { title: "ADU Construction", image: require('@/assets/works/ADU.webp') },
       ],
       services: [
-        { name: "GENERAL REMODELING", icon: "tools" },
-        { name: "KITCHEN REMODELING", icon: "sink" },
-        { name: "BATHROOM REMODELING", icon: "shower" },
-        { name: "BEDROOM REMODELING", icon: "bed" },
-        { name: "GARAGE RENOVATION", icon: "warehouse" },
-        { name: "ADU CONSTRUCTION", icon: "house-chimney" },
-        { name: "SMART HOME INSTALLATION", icon: "microchip" },
-        { name: "CLOSETS", icon: "door-closed" },
+        { name: "Electrical", icon: "bolt" },          // ⚡ Электрика
+        { name: "Plumbing", icon: "wrench" },         // 🔧 Водопровод
+        { name: "Painting", icon: "paint-roller" },   // 🎨 Покраска
+        { name: "Tile Jobs", icon: "th-large" },      // 🔳 Плиточные работы
+        { name: "Lumber", icon: "tree" },            // 🌲 Пиломатериалы
+        { name: "Kitchen Cabinets", icon: "box-open" }, // 🏠 Кухонные шкафы
+        { name: "Countertops", icon: "layer-group" }, // 🛋️ Столешницы
+        { name: "HVAC/Ventilation", icon: "fan" },   // 🌬️ Вентиляция
+        { name: "Floor Installation", icon: "ruler-combined" }, // 🏠 Укладка пола
+        { name: "Wood Restoration", icon: "hammer" },  // 🔨 Восстановление дерева
+        { name: "Handyman Services", icon: "tools" }, // 🛠️ Мастер на час
+        { name: "Drywall Installation", icon: "align-left" } // 🏗️ Установка гипсокартона
       ],
       testimonials: [
         { name: "John Doe", quote: "Amazing work! My kitchen looks stunning." },
