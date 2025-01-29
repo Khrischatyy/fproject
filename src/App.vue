@@ -141,6 +141,19 @@
       </div>
     </section>
 
+    <!-- Our Services -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto max-w-7xl px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div v-for="service in services" :key="service.name" class="p-6 bg-gray-100 rounded-lg shadow-md flex items-center justify-center space-x-4">
+            <font-awesome-icon :icon="service.icon" class="text-3xl text-blue-500" />
+            <h3 class="text-lg font-semibold">{{ service.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Our Works -->
     <section id="works" class="py-16 bg-gray-100">
       <div class="container mx-auto max-w-7xl px-6 text-center">
