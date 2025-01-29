@@ -157,7 +157,7 @@
     <!-- Our Works -->
     <section id="works" class="py-16 bg-gray-100">
       <div class="container mx-auto max-w-7xl px-6 text-center">
-        <h2 class="text-3xl font-bold mb-8">Our Works</h2>
+<!--        <h2 class="text-3xl font-bold mb-8">Our Works</h2>-->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div v-for="work in works" :key="work.title" class="max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
             <div class="w-full h-64">
