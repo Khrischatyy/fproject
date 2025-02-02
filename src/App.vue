@@ -143,20 +143,28 @@
 
     <!-- Our Services -->
     <section id="services" class="py-16 bg-white">
-      <div class="container mx-auto max-w-7xl px-6 text-center">
-        <h2 class="text-3xl font-bold mb-4">Our Services</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div v-for="service in services" :key="service.name" class="p-6 bg-gray-100 rounded-lg shadow-md flex items-center space-x-4">
-
-            <!-- Отображаем FontAwesome иконки -->
+      <div class="container mx-auto max-w-7xl px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div
+              v-for="service in services"
+              :key="service.name"
+              class="flex items-center justify-center space-x-4 p-6 bg-gray-100 rounded-lg shadow-md w-full h-28"
+          >
+            <!-- FontAwesome Icon -->
             <font-awesome-icon
                 v-if="isFontAwesomeIcon(service.icon)"
                 :icon="['fas', service.icon]"
-                class="text-3xl text-blue-500"
+                class="text-4xl text-blue-500"
             />
 
-            <!-- Отображаем SVG-иконки с увеличенным размером -->
-            <img v-else :src="service.icon" class="h-12 w-12" alt="" />
+            <!-- SVG Image -->
+            <img
+                v-else
+                :src="service.icon"
+                class="h-14 w-14"
+                alt=""
+            />
 
             <h3 class="text-lg font-semibold">{{ service.name }}</h3>
           </div>
@@ -181,18 +189,18 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-16 bg-gray-100">
-      <div class="container mx-auto max-w-7xl px-6 text-center">
-        <h2 class="text-3xl font-bold mb-8">What Our Clients Say</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div v-for="testimonial in testimonials" :key="testimonial.name" class="p-6 bg-white rounded-lg shadow-md">
-            <p class="text-lg italic mb-4">"{{ testimonial.quote }}"</p>
-            <h3 class="font-semibold">- {{ testimonial.name }}</h3>
-          </div>
-        </div>
-      </div>
-    </section>
+<!--    &lt;!&ndash; Testimonials &ndash;&gt;-->
+<!--    <section id="testimonials" class="py-16 bg-gray-100">-->
+<!--      <div class="container mx-auto max-w-7xl px-6 text-center">-->
+<!--        <h2 class="text-3xl font-bold mb-8">What Our Clients Say</h2>-->
+<!--        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">-->
+<!--          <div v-for="testimonial in testimonials" :key="testimonial.name" class="p-6 bg-white rounded-lg shadow-md">-->
+<!--            <p class="text-lg italic mb-4">"{{ testimonial.quote }}"</p>-->
+<!--            <h3 class="font-semibold">- {{ testimonial.name }}</h3>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
 
     <!-- Contact Us -->
     <section id="contact" class="py-16 bg-white">
