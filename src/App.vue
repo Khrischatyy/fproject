@@ -250,31 +250,32 @@ export default {
   data() {
     return {
       works: [
+        { title: "Smart Home", image: require('@/assets/works/smart home.jpg') },
         { title: "General Remodeling", image: require('@/assets/works/generalremodeling.jpg') },
         { title: "Kitchen Remodeling", image: require('@/assets/works/kitchen.jpeg') },
         { title: "Bedroom Remodeling", image: require('@/assets/works/bedroom remodeling.jpg') },
         { title: "Garage Renovation", image: require('@/assets/works/garage.webp') },
-        { title: "Smart Home", image: require('@/assets/works/smart home.jpg') },
         { title: "Bathroom Remodeling", image: require('@/assets/works/Bathroom.jpg') },
         { title: "Outside Restoration", image: require('@/assets/works/outside.jpeg') },
         { title: "Closets Remodeling", image: require('@/assets/works/closets.jpg') },
         { title: "ADU Construction", image: require('@/assets/works/ADU.webp') },
       ],
-      services: [
-        { name: "Electrical", icon: "bolt" },          // ⚡ Электрика
-        { name: "Plumbing", icon: "wrench" },         // 🔧 Водопровод
-        { name: "Painting", icon: "paint-roller" },   // 🎨 Покраска
-        { name: "Tile Jobs", icon: "th-large" },      // 🔳 Плиточные работы
-        { name: "Lumber", icon: "tree" },            // 🌲 Пиломатериалы
-        { name: "Kitchen Cabinets", icon: "box-open" }, // 🏠 Кухонные шкафы
-        { name: "Countertops", icon: "layer-group" }, // 🛋️ Столешницы
-        { name: "HVAC/Ventilation", icon: "fan" },   // 🌬️ Вентиляция
-        { name: "Floor Installation", icon: "ruler-combined" }, // 🏠 Укладка пола
-        { name: "Wood Restoration", icon: "hammer" },  // 🔨 Восстановление дерева
-        { name: "Handyman Services", icon: "tools" }, // 🛠️ Мастер на час
-        { name: "Drywall Installation", icon: "align-left" } // 🏗️ Установка гипсокартона
-      ],
-      testimonials: [
+      
+     services: [
+    { name: "Electrical", icon: "bolt" },              // ⚡ Электрика
+    { name: "Plumbing", icon: "faucet-drip" },             // 🚰 Водопровод
+    { name: "Painting", icon: "paint-roller" },       // 🎨 Покраска
+    { name: "Tile Jobs", icon: "th-large" },          // 🔳 Плиточные работы
+    { name: "Lumber", icon: "cubes" },               // 🌲 Пиломатериалы
+    { name: "Kitchen Cabinets", icon: "box" },       // 🏠 Кухонные шкафы
+    { name: "Countertops", icon: "ruler-combined"},     // 🛋️ Столешницы
+    { name: "HVAC/Ventilation", icon: "fan" },       // 🌬️ Вентиляция
+    { name: "Floor Installation", icon: "th" },      // 🏠 Укладка пола
+    { name: "Wood Restoration", icon: "brush" },     // 🔨 Восстановление дерева
+    { name: "Handyman Services", icon: "tools" },    // 🛠️ Мастер на час
+    { name: "Drywall Installation", icon: "layer-group" } // 🏗️ Установка гипсокартона
+],
+testimonials: [
         { name: "John Doe", quote: "Amazing work! My kitchen looks stunning." },
         { name: "Jane Smith", quote: "Professional and efficient team!" },
         { name: "Mike Brown", quote: "Exceeded my expectations in every way." },

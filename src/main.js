@@ -6,26 +6,24 @@ import './assets/main.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 import {
     faBolt,             // Electrical
-    faWrench,           // Plumbing
+    faRulerCombined,
+    faFaucetDrip,
     faPaintRoller,      // Painting
     faThLarge,         // Tile Jobs
-    faTree,             // Lumber
-    faBoxOpen,          // Kitchen Cabinets
-    faLayerGroup,       // Countertops
-    faFan,              // HVAC/Ventilation
-    faRulerCombined,    // Floor Installation
-    faHammer,           // Wood Restoration
-    faTools,            // Handyman Services
-    faAlignLeft         // Drywall Installation
-} from '@fortawesome/free-solid-svg-icons';
+    faCubes,           // Lumber (better representation)
+    faBox,             // Kitchen Cabinets
+    faBorderAll,       // Countertops
+    faFan,             // HVAC/Ventilation
+    faTh,              // Floor Installation
+    faBrush,           // Wood Restoration
+    faTools,           // Handyman Services
+    faLayerGroup       // Drywall Installation
+} from "@fortawesome/free-solid-svg-icons";
 
-// Добавляем иконки в библиотеку
-library.add(
-    faBolt, faWrench, faPaintRoller, faThLarge, faTree, faBoxOpen, faLayerGroup,
-    faFan, faRulerCombined, faHammer, faTools, faAlignLeft
-);
+library.add(faBolt, faRulerCombined, faFaucetDrip, faPaintRoller, faThLarge, faCubes, faBox, faBorderAll, faFan, faTh, faBrush, faTools, faLayerGroup);
 
 const app = createApp(App);
 app.component('font-awesome-icon', FontAwesomeIcon);
