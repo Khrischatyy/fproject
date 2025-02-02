@@ -146,8 +146,18 @@
       <div class="container mx-auto max-w-7xl px-6 text-center">
         <h2 class="text-3xl font-bold mb-4">Our Services</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <div v-for="service in services" :key="service.name" class="p-6 bg-gray-100 rounded-lg shadow-md flex items-center justify-center space-x-4">
-            <font-awesome-icon :icon="service.icon" class="text-3xl text-blue-500" />
+          <div v-for="service in services" :key="service.name" class="p-6 bg-gray-100 rounded-lg shadow-md flex items-center space-x-4">
+
+            <!-- Отображаем FontAwesome иконки -->
+            <font-awesome-icon
+                v-if="isFontAwesomeIcon(service.icon)"
+                :icon="['fas', service.icon]"
+                class="text-3xl text-blue-500"
+            />
+
+            <!-- Отображаем SVG-иконки -->
+            <img v-else :src="service.icon" class="h-8 w-8" alt="" />
+
             <h3 class="text-lg font-semibold">{{ service.name }}</h3>
           </div>
         </div>
@@ -246,6 +256,13 @@
 </template>
 
 <script>
+
+
+import lumberIcon from '@/assets/services/Lumber.svg';
+import kitchenCabinetsIcon from '@/assets/services/Kitchen cabinets.svg';
+import countertopIcon from '@/assets/services/Countertop.svg';
+import floorIcon from '@/assets/services/floor.svg';
+import drywallIcon from '@/assets/services/Drywall.svg';
 export default {
   data() {
     return {
@@ -260,21 +277,23 @@ export default {
         { title: "Closets Remodeling", image: require('@/assets/works/closets.jpg') },
         { title: "ADU Construction", image: require('@/assets/works/ADU.webp') },
       ],
-      
-     services: [
-    { name: "Electrical", icon: "bolt" },              // ⚡ Электрика
-    { name: "Plumbing", icon: "faucet-drip" },             // 🚰 Водопровод
-    { name: "Painting", icon: "paint-roller" },       // 🎨 Покраска
-    { name: "Tile Jobs", icon: "th-large" },          // 🔳 Плиточные работы
-    { name: "Lumber", icon: "cubes" },               // 🌲 Пиломатериалы
-    { name: "Kitchen Cabinets", icon: "box" },       // 🏠 Кухонные шкафы
-    { name: "Countertops", icon: "ruler-combined"},     // 🛋️ Столешницы
-    { name: "HVAC/Ventilation", icon: "fan" },       // 🌬️ Вентиляция
-    { name: "Floor Installation", icon: "th" },      // 🏠 Укладка пола
-    { name: "Wood Restoration", icon: "brush" },     // 🔨 Восстановление дерева
-    { name: "Handyman Services", icon: "tools" },    // 🛠️ Мастер на час
-    { name: "Drywall Installation", icon: "layer-group" } // 🏗️ Установка гипсокартона
-],
+            services:[
+              { name: "Electrical", icon: "bolt" },  // FontAwesome
+              { name: "Plumbing", icon: "faucet-drip" },
+              { name: "Painting", icon: "paint-roller" },
+              { name: "Tile Jobs", icon: "th-large" },
+
+              // SVG-иконки
+              { name: "Lumber", icon: lumberIcon },
+              { name: "Kitchen Cabinets", icon: kitchenCabinetsIcon },
+              { name: "Countertops", icon: countertopIcon },
+              { name: "Floor Installation", icon: floorIcon },
+              { name: "Drywall Installation", icon: drywallIcon },
+
+              { name: "HVAC/Ventilation", icon: "fan" },
+              { name: "Wood Restoration", icon: "brush" },
+              { name: "Handyman Services", icon: "tools" },
+            ],
 testimonials: [
         { name: "John Doe", quote: "Amazing work! My kitchen looks stunning." },
         { name: "Jane Smith", quote: "Professional and efficient team!" },
@@ -304,6 +323,9 @@ testimonials: [
     closeMobileMenu() {
       this.isMobileMenuOpen = false;
     },
+    isFontAwesomeIcon(icon) {
+      return typeof icon === "string" && !icon.endsWith(".svg");
+    }
   },
 };
 </script>
