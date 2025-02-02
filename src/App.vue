@@ -155,8 +155,8 @@
                 class="text-3xl text-blue-500"
             />
 
-            <!-- Отображаем SVG-иконки -->
-            <img v-else :src="service.icon" class="h-8 w-8" alt="" />
+            <!-- Отображаем SVG-иконки с увеличенным размером -->
+            <img v-else :src="service.icon" class="h-12 w-12" alt="" />
 
             <h3 class="text-lg font-semibold">{{ service.name }}</h3>
           </div>
