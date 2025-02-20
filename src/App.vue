@@ -30,7 +30,7 @@
             <a href="#works" class="text-sm font-semibold text-gray-900 hover:underline">Our Works</a>
             <a href="#services" class="text-sm font-semibold text-gray-900 hover:underline">Our Services</a>
             <a href="#testimonials" class="text-sm font-semibold text-gray-900 hover:underline">Testimonials</a>
-            <a href="#faq" class="text-sm font-semibold text-gray-900 hover:underline">FAQ</a>
+<!--            <a href="#faq" class="text-sm font-semibold text-gray-900 hover:underline">FAQ</a>-->
           </div>
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#contact" class="text-sm font-semibold text-gray-900">
@@ -94,7 +94,7 @@
             <a
                 @click="closeMobileMenu"
                 href="#contact"
-                class="block w-full text-center mt-4 px-4 py-2 font-semibold text-white bg-neutral-600 rounded-lg shadow-sm hover:bg-indigo-500"
+                class="block w-full text-center mt-4 px-4 py-2 font-semibold text-white bg-neutral-600 rounded-lg shadow-sm hover:bg-neutral-500"
             >Get in Touch <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
@@ -155,23 +155,22 @@
             <font-awesome-icon
                 v-if="isFontAwesomeIcon(service.icon)"
                 :icon="['fas', service.icon]"
-                class="text-4xl text-blue-500"
+                class="text-4xl text-neutral-600"
             />
 
             <!-- SVG Image -->
             <img
                 v-else
                 :src="service.icon"
-                class="h-14 w-14"
+                class="h-14 w-14 filter grayscale"
                 alt=""
             />
 
-            <h3 class="text-lg font-semibold">{{ service.name }}</h3>
+            <h3 class="text-lg font-semibold text-neutral-700">{{ service.name }}</h3>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Our Works -->
     <section id="works" class="py-16 bg-gray-100">
       <div class="container mx-auto max-w-7xl px-6 text-center">
@@ -221,7 +220,7 @@
             <textarea name="message" id="message" rows="3" class="block w-full py-3 px-4 text-base text-gray-900 bg-gray-100 rounded-md" placeholder="Write your message..."></textarea>
           </div>
           <div class="text-center">
-            <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-500">Send Message</button>
+            <button type="submit" class="bg-neutral-600 text-white px-8 py-3 rounded-lg hover:bg-neutral-500">Send Message</button>
           </div>
         </form>
       </div>
@@ -249,9 +248,9 @@
             <li>
               <a href="#services" class="hover:underline me-4 md:me-6">Services</a>
             </li>
-            <li>
-              <a href="#faq" class="hover:underline me-4 md:me-6">FAQ</a>
-            </li>
+<!--            <li>-->
+<!--              <a href="#faq" class="hover:underline me-4 md:me-6">FAQ</a>-->
+<!--            </li>-->
             <li>
               <a href="#contact" class="hover:underline">Contact Us</a>
             </li>
