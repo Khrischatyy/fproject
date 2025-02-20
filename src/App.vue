@@ -46,11 +46,11 @@
         >
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Elite Remodeling</span>
+              <span class="sr-only">Legacy Builders and Remodeling</span>
               <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                  alt="Elite Remodeling Logo"
+                  class="h-20 w-auto lg:h-16"
+                  :src="require('@/assets/logo.png')"
+                  alt="Legacy Builders and Remodeling"
               />
             </a>
             <button @click="closeMobileMenu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
@@ -94,8 +94,8 @@
             <a
                 @click="closeMobileMenu"
                 href="#contact"
-                class="block w-full text-center mt-4 px-4 py-2 font-semibold text-white bg-indigo-600 rounded-lg shadow-sm hover:bg-indigo-500"
-            >Get in Touch</a>
+                class="block w-full text-center mt-4 px-4 py-2 font-semibold text-white bg-neutral-600 rounded-lg shadow-sm hover:bg-indigo-500"
+            >Get in Touch <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
       </header>
@@ -231,14 +231,17 @@
     <footer class="bg-white text-gray-900 rounded-lg shadow m-4">
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
-          <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img
-                class="h-20 w-auto lg:h-16"
+                class="h-16 w-auto lg:h-14 mb-3"
                 :src="require('@/assets/logo.png')"
                 alt="Legacy Builders and Remodeling"
             />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap">Legacy Builders and Remodeling</span>
+            <div class="text-lg lg:text-xl font-semibold text-gray-900">
+              Legacy Builders and Remodeling
+            </div>
           </a>
+
           <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
             <li>
               <a href="#about" class="hover:underline me-4 md:me-6">About Us</a>
@@ -256,7 +259,7 @@
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <span class="block text-sm text-gray-500 sm:text-center">
-        © 2025 <a href="#" class="hover:underline">Elite Remodeling</a>. All Rights Reserved.
+        © 2025 <a href="#" class="hover:underline">Legacy Builders and Remodelling</a>. All Rights Reserved.
       </span>
       </div>
     </footer>
